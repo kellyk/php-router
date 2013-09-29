@@ -1,2 +1,9 @@
 <?php
-echo "login controller";
+require_once('BaseController.php');
+
+class LoginController extends BaseController {
+
+	public function __construct() {
+		parent::__construct();
+	}
+}
