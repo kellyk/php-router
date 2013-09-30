@@ -1,26 +1,25 @@
 <?php
 
-include_once('includes/URI_Helper.php');
-
 if (isset($_SERVER['PATH_INFO']) && strlen($_SERVER['PATH_INFO']) > 1) {
 
 	$segments = explode('/' , $_SERVER['PATH_INFO']);
 
-	//build our class and method names from URL
+	// build our class name from URL and load its file
 	$controller = ucwords($segments[1]) . 'Controller';
-	if ( $segments[2] )
-		$method = $segments[2];
-
-	//require proper controller based on URL
 	require_once('controllers/' . $controller . '.php');
 
-	//instantiate new controller
+	// instantiate new controller
 	$page = new $controller();
 
-	//security check that method exists
-	if(method_exists($page, $method))
-		$page->$method();
+	// check for method in URL
+	// if a legitimate method is found, execute it
+	if (sizeof($segments) > 2 && $segments[2] ) {
+		$method = $segments[2];
 
+		//security check that method exists
+		if(method_exists($page, $method))
+			$page->$method();
+	}
 } else {
 	include_once('home.php');
 }

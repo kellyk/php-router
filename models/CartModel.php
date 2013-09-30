@@ -7,10 +7,12 @@ class CartModel extends BaseModel {
 	}
 
 	public function getData() {
+		// some dummy data
 		$array = array(
-			'name'    => 'Kelly',
-			'project' => 'router',
-			'dog'     => 'Yoshi',
+			'isbn' => 123456789,
+			'bookTitle'    => 'Intro to Databases',
+			'author' => 'Jon Stewart',
+			'publishDate'     => '03-MAR-2001',
 		);
 
 		return $array;
