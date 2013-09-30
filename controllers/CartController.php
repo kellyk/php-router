@@ -4,6 +4,9 @@ require_once('BaseController.php');
 class CartController extends BaseController {
 	public function __construct() {
 		parent::__construct();
+	}
+
+	public function index() {
 		require_once('views/CartView.php');
 	}
 

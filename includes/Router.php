@@ -13,13 +13,14 @@ if (isset($_SERVER['PATH_INFO']) && strlen($_SERVER['PATH_INFO']) > 1) {
 
 	// check for method in URL
 	// if a legitimate method is found, execute it
-	if (sizeof($segments) > 2 && $segments[2] ) {
+	if (sizeof($segments) > 2 && $segments[2] )
 		$method = $segments[2];
+	else
+		$method = 'index';
 
-		//security check that method exists
-		if(method_exists($page, $method))
-			$page->$method();
-	}
-} else {
+	//security check that method exists
+	if(method_exists($page, $method))
+		$page->$method();
+
+} else
 	include_once('home.php');
-}
