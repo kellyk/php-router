@@ -3,7 +3,7 @@
   	<div class="form-group">
 	    <label for="searchFor">Search for:</label>
 	    <input type="text" class="form-control" id="searchFor" placeholder="ex. Databases">
-	</div> 
+	</div>
   	<div class="form-group">
 	    <label for="category">Category:</label>
 	    <select multiple name="category" id="category">
@@ -12,6 +12,6 @@
 	    	<option value="english">English</option>
 	    </select>
   	</div>
-	  	
+
   <button type="submit" class="btn btn-default">Submit</button>
 </form>

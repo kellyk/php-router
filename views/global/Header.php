@@ -18,8 +18,8 @@
 
 	<nav>
 		<ul class="nav nav-tabs">
-			<li class="active"><a href="./search">Search</a></li>
-			<li><a href="./cart">Cart</a></li>
-			<li><a href="./login">Login</a></li>
+			<li class="active"><a href="<?php echo SITE_ROOT; ?>/search">Search</a></li>
+			<li><a href="<?php echo SITE_ROOT; ?>/cart">Cart</a></li>
+			<li><a href="<?php echo SITE_ROOT; ?>/login">Login</a></li>
 		</ul>
 	</nav>
